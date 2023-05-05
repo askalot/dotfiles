@@ -12,6 +12,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Git changes in gutter
 Plug 'airblade/vim-gitgutter'
+" Toggle comments
+Plug 'tpope/vim-commentary'
 " File browser
 Plug 'preservim/nerdtree'
 " Icons
@@ -50,6 +52,11 @@ nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>f :Rg<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>h :History<CR>
+" }}}
+
+" vim-commentary
+" --------------
+nnoremap <Leader>/ :Commentary<CR>
 " }}}
 
 " NERDTree {{{
