@@ -19,12 +19,21 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 " }}}
 
+" Defaults {{{
+" ---------------------
+" Map <Space> as <Leader>
+let mapleader=' '
+" Enable mouse
+set mouse=a
+" Enable UTF-8 encoding to support icons
+set encoding=UTF-8
+" }}}
+
 " Colors {{{
 " ----------
 colorscheme one
 set background=dark
 set termguicolors
-syntax enable
 " }}}
 
 " vim-airline {{{
@@ -47,11 +56,6 @@ nnoremap <Leader>h :History<CR>
 " ------------
 let g:NERDTreeWinPos='right'
 nnoremap <Leader>n :NERDTreeToggle<CR>
-" }}}
-
-" Icons {{{
-" ---------
-set encoding=UTF-8
 " }}}
 
 " Buffers {{{
