@@ -14,6 +14,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 " Toggle comments
 Plug 'tpope/vim-commentary'
+" Linting
+Plug 'dense-analysis/ale'
 " File browser
 Plug 'preservim/nerdtree'
 " Icons
@@ -57,6 +59,21 @@ nnoremap <Leader>h :History<CR>
 " vim-commentary
 " --------------
 nnoremap <Leader>/ :Commentary<CR>
+" }}}
+
+" Linting {{{
+" -----------
+let g:ale_completion_enabled=1
+let g:ale_fix_on_save=1
+let g:ale_lint_on_enter=0
+let g:ale_lint_on_save=1
+let g:ale_sign_error='●'
+let g:ale_sign_warning='⚠️'
+let g:ale_fixers={}
+let g:ale_fixers['javascript']=['prettier', 'eslint']
+let g:airline#extensions#ale#enabled=1
+" Jump to next error with <Leader>e
+nmap <Leader>e <Plug>(ale_next_wrap)
 " }}}
 
 " NERDTree {{{
