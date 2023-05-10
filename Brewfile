@@ -16,6 +16,8 @@ brew "tmux"
 brew "tree"
 brew "vim"
 brew "zoxide"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 
 cask "alacritty"
 cask "firefox"

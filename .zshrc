@@ -1,6 +1,11 @@
 # Vim mode
 bindkey -v
 
+# Plugins
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Git
 
 ## Copy a branch (including remotes) name to clipboard
