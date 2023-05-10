@@ -1,3 +1,9 @@
 [user]
 	name = Arunan Skanthan
 	email = 59402100+askalot@users.noreply.github.com
+[github]
+	user = askalot
+[alias]
+	ls = log --all --graph --oneline
+	la = log --all --graph --pretty=format:'%C(blue)%h%Creset - %C(green)[%cr]%Creset %s%C(auto)%d%Creset %C(dim white)<%an>%Creset'
+	un = reset HEAD --
