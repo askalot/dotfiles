@@ -1,6 +1,7 @@
 #!/bin/sh
 
 . "./config/constants.sh"
+. "./helpers/zsh.sh"
 . "./helpers/homebrew.sh"
 . "./helpers/alacritty.sh"
 . "./helpers/ssh.sh"
@@ -14,3 +15,4 @@ setup_asdf
 setup_vim
 setup_alacritty
 setup_tmux
+setup_zsh
