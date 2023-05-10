@@ -8,6 +8,7 @@
 . "./helpers/asdf.sh"
 . "./helpers/vim.sh"
 . "./helpers/tmux.sh"
+. "./helpers/zoxide.sh"
 
 setup_homebrew
 setup_ssh_keys
@@ -15,4 +16,5 @@ setup_asdf
 setup_vim
 setup_alacritty
 setup_tmux
+setup_zoxide
 setup_zsh

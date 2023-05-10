@@ -15,6 +15,7 @@ brew "tldr"
 brew "tmux"
 brew "tree"
 brew "vim"
+brew "zoxide"
 
 cask "alacritty"
 cask "firefox"
