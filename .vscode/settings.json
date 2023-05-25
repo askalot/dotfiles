@@ -1,0 +1,13 @@
+{
+	"editor.fontFamily": "JetBrains Mono, monospace",
+	"editor.fontSize": 16,
+	"editor.formatOnSave": true,
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 100,
+	"files.insertFinalNewline": true,
+	"terminal.integrated.fontSize": 14,
+	"workbench.colorTheme": "Atom One Dark",
+	"workbench.iconTheme": "file-icons",
+	"workbench.sideBar.location": "right",
+	"workbench.startupEditor": "newUntitledFile",
+}

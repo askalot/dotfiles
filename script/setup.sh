@@ -10,6 +10,7 @@
 . "./helpers/nodejs.sh"
 . "./helpers/vim.sh"
 . "./helpers/tmux.sh"
+. "./helpers/vscodium.sh"
 . "./helpers/zoxide.sh"
 
 setup_homebrew
@@ -22,3 +23,4 @@ setup_tmux
 setup_zoxide
 setup_zsh
 setup_nodejs
+setup_vscodium
