@@ -7,6 +7,7 @@
 . "./helpers/ssh.sh"
 . "./helpers/asdf.sh"
 . "./helpers/fzf.sh"
+. "./helpers/nodejs.sh"
 . "./helpers/vim.sh"
 . "./helpers/tmux.sh"
 . "./helpers/zoxide.sh"
@@ -20,3 +21,4 @@ setup_alacritty
 setup_tmux
 setup_zoxide
 setup_zsh
+setup_nodejs
