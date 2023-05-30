@@ -31,6 +31,8 @@ let mapleader=' '
 set mouse=a
 " Enable UTF-8 encoding to support icons
 set encoding=UTF-8
+" In non-insert mode show pressed key in bottom right
+set showcmd
 " }}}
 
 " Colors {{{
@@ -50,10 +52,11 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 
 " fzf {{{
 " -------
-nnoremap <Leader>p :Files<CR>
-nnoremap <Leader>f :Rg<CR>
+nnoremap <Leader>p :Files!<CR>
+nnoremap <Leader>f :Rg!<CR>
 nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>h :History<CR>
+nnoremap <Leader>h :History!<CR>
+nnoremap <Leader>c :Commits!<CR>
 " }}}
 
 " vim-commentary
@@ -80,11 +83,13 @@ nmap <Leader>e <Plug>(ale_next_wrap)
 " ------------
 let g:NERDTreeWinPos='right'
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>g :NERDTreeFind<CR>
 " }}}
 
 " Buffers {{{
 " -----------
 nnoremap <Leader>t :enew<CR>
+nnoremap <Leader>w :bdelete<CR>
 nnoremap <Leader>[ :bprevious<CR>
 nnoremap <Leader>] :bnext<CR>
 " }}}
