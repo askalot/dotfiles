@@ -12,6 +12,7 @@
 . "./helpers/tmux.sh"
 . "./helpers/vscodium.sh"
 . "./helpers/zoxide.sh"
+. "./helpers/java.sh"
 
 setup_homebrew
 setup_ssh_keys
@@ -24,3 +25,4 @@ setup_zoxide
 setup_zsh
 setup_nodejs
 setup_vscodium
+setup_java
