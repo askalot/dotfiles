@@ -13,6 +13,7 @@
 . "./helpers/vscodium.sh"
 . "./helpers/zoxide.sh"
 . "./helpers/java.sh"
+. "./helpers/go.sh"
 
 setup_homebrew
 setup_ssh_keys
@@ -26,3 +27,4 @@ setup_zsh
 setup_nodejs
 setup_vscodium
 setup_java
+setup_go
