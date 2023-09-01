@@ -20,6 +20,7 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 cask "alacritty"
+cask "docker"
 cask "firefox"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
