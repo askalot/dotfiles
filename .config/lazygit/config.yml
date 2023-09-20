@@ -1,0 +1,9 @@
+gui:
+  mainPanelSplitMode: 'horizontal'
+  showIcons: true
+  theme:
+    activeBorderColor:
+      - bold
+      - white
+    inactiveBorderColor:
+      - '#777777'
