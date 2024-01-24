@@ -1,0 +1,37 @@
+[colors.primary]
+background = "#282C34"
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window]
+decorations = "Buttonless"
+startup_mode = "Maximized"
+
+[window.padding]
+x = 10
+y = 10
+
+[keyboard]
+bindings = [
+# tmux
+{ chars = "\u0001c", key = "T", mods = "Command" },
+{ chars = "\u0001x", key = "W", mods = "Command" },
+{ chars = "\u0001p", key = "LBracket", mods = "Command" },
+{ chars = "\u0001n", key = "RBracket", mods = "Command" },
+{ chars = "\u00011", key = "Key1", mods = "Command" },
+{ chars = "\u00012", key = "Key2", mods = "Command" },
+{ chars = "\u00013", key = "Key3", mods = "Command" },
+{ chars = "\u00014", key = "Key4", mods = "Command" },
+{ chars = "\u00015", key = "Key5", mods = "Command" },
+{ chars = "\u00016", key = "Key6", mods = "Command" },
+{ chars = "\u00017", key = "Key7", mods = "Command" },
+{ chars = "\u00018", key = "Key8", mods = "Command" },
+{ chars = "\u00019", key = "Key9", mods = "Command" },
+# vim
+{ chars = "\u001B:w\n", key = "S", mods = "Command" },
+{ chars = "\u001B:x\n", key = "S", mods = "Command|Shift" },
+]
