@@ -8,7 +8,9 @@ size = 16.0
 family = "JetBrainsMono Nerd Font"
 
 [window]
+blur = true
 decorations = "Buttonless"
+opacity = 0.95
 startup_mode = "Maximized"
 
 [window.padding]
@@ -31,6 +33,8 @@ bindings = [
 { chars = "\u00017", key = "Key7", mods = "Command" },
 { chars = "\u00018", key = "Key8", mods = "Command" },
 { chars = "\u00019", key = "Key9", mods = "Command" },
+{ chars = "\u0001)", key = "L", mods = "Command" },
+{ chars = "\u0001(", key = "L", mods = "Command|Shift" },
 # vim
 { chars = "\u001B:w\n", key = "S", mods = "Command" },
 { chars = "\u001B:x\n", key = "S", mods = "Command|Shift" },
