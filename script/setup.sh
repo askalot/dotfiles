@@ -5,7 +5,7 @@
 . "./helpers/homebrew.sh"
 . "./helpers/alacritty.sh"
 . "./helpers/ssh.sh"
-. "./helpers/asdf.sh"
+. "./helpers/mise.sh"
 . "./helpers/fzf.sh"
 . "./helpers/nodejs.sh"
 . "./helpers/vim.sh"
@@ -17,7 +17,7 @@
 
 setup_homebrew
 setup_ssh_keys
-setup_asdf
+setup_mise
 setup_fzf
 setup_vim
 setup_alacritty
