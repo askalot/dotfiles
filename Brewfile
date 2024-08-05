@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 
 brew "bat"
+brew "diff-so-fancy"
 brew "ffmpeg"
 brew "fzf"
 brew "git"
