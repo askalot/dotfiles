@@ -1,9 +1,11 @@
 gui:
-  mainPanelSplitMode: 'horizontal'
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 6
+  showFileTree: false
   showIcons: true
   theme:
     activeBorderColor:
       - bold
-      - white
+      - '#ffffff'
     inactiveBorderColor:
       - '#777777'
