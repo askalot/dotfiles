@@ -14,6 +14,7 @@
 . "./helpers/zoxide.sh"
 . "./helpers/go.sh"
 . "./helpers/diff_so_fancy.sh"
+. "./helpers/eza.sh"
 
 setup_homebrew
 setup_ssh_keys
@@ -28,3 +29,4 @@ setup_nodejs
 setup_vscodium
 setup_go
 setup_diff_so_fancy
+setup_eza

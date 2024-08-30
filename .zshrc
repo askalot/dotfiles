@@ -9,8 +9,6 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Aliases
 alias lg=lazygit
 alias ld=lazydocker
-alias la="eza --long --all --group-directories-first --icons"
-alias lt="eza --tree --all --git-ignore --group-directories-first --icons"
 
 ## Git
 
