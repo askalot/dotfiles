@@ -18,7 +18,8 @@ else
 	alias ls="ls --color=auto"
 fi
 
-alias tree="tree -I '.git|node_modules'"
+alias la="eza --long --all --group-directories-first --icons"
+alias lt="eza --tree --all --git-ignore --group-directories-first --icons"
 
 ## Git
 
