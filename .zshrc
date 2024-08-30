@@ -17,6 +17,9 @@ if [ uname = 'Darwin' ]; then
 else
 	alias ls="ls --color=auto"
 fi
+alias cat=bat
+alias lg=lazygit
+alias ld=lazydocker
 
 alias la="eza --long --all --group-directories-first --icons"
 alias lt="eza --tree --all --git-ignore --group-directories-first --icons"
