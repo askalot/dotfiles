@@ -6,7 +6,7 @@ setup_vim() {
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 	# Copy config template to config directory
-	cp "../.vimrc" "$HOME/.vimrc"
+	cp "../vim/.vimrc" "$HOME/.vimrc"
 
 	# Install Vim plugins
 	vim +'PlugInstall --sync' +qa
