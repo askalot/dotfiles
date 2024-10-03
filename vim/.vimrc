@@ -23,6 +23,11 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+" Backup files
+set backupdir=.backup/,~/.backup/,/tmp//
+set directory=.swp/,~/.swp/,/tmp//
+set undodir=.undo/,~/.undo/,/tmp//
+
 " Buffers
 nnoremap <Leader>w :bdelete<CR>
 nnoremap <Leader>] :bnext<CR>
