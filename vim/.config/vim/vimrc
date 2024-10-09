@@ -11,13 +11,14 @@ set mouse=a
 call plug#begin()
 
 Plug 'metalelf0/base16-black-metal-scheme'
-" Plug 'rakr/vim-one'
+Plug 'rakr/vim-one'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'preservim/tagbar'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
 Plug 'kshenoy/vim-signature'
@@ -45,12 +46,14 @@ nnoremap <Leader>t :enew<CR>
 colorscheme base16-black-metal-bathory
 " colorscheme one
 set background=dark
+"set background=light
 set termguicolors
 
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
 
 " Editing
+set backspace=eol,indent,start
 set noexpandtab
 set shiftwidth=4
 set tabstop=4
@@ -60,18 +63,19 @@ vmap <A-Down> xkP`[V`]
 vmap <A-Up> xp`[V`]
 
 " File explorer
-highlight VertSplit guibg=NONE guifg=#111111 ctermbg=NONE ctermfg=NONE
 let g:NERDTreeWinPos='right'
 let g:NERDTreeDirArrowExpandable=''
 let g:NERDTreeDirArrowCollapsible=''
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>g :NERDTreeFind<CR>
 nnoremap <Leader>c :TagbarToggle<CR>
-set fillchars+=vert:\│
 
 " Layout
+set colorcolumn=80
 set listchars=""
 " set listchars+=eol:↵
+highlight VertSplit guibg=NONE guifg=#111111
+set fillchars+=vert:\│
 set listchars+=nbsp:␣
 set listchars+=tab:→\ 
 set listchars+=trail:·
@@ -106,4 +110,3 @@ let g:ale_lint_on_save=1
 let g:ale_linters={ 'go' : ['gopls'] }
 let g:ale_sign_error='●'
 let g:ale_sign_warning='⚠️'
-
