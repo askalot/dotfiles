@@ -1,6 +1,7 @@
 gui:
   expandFocusedSidePanel: true
   expandedSidePanelWeight: 6
+  nerdFontsVersion: 3
   showFileTree: false
   showIcons: true
   theme:
