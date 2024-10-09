@@ -1,3 +1,6 @@
+" Disable Vi compatibility
+set nocompatible
+
 " Map <Space> as <Leader>
 let mapleader=' '
 
@@ -12,8 +15,12 @@ Plug 'metalelf0/base16-black-metal-scheme'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'preservim/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
+Plug 'mattn/emmet-vim'
+Plug 'kshenoy/vim-signature'
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -43,10 +50,51 @@ set termguicolors
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
 
+" Editing
+set noexpandtab
+set shiftwidth=4
+set tabstop=4
+nmap <A-Down> ddp
+nmap <A-Up> ddkP
+vmap <A-Down> xkP`[V`]
+vmap <A-Up> xp`[V`]
+
 " File explorer
+highlight VertSplit guibg=NONE guifg=#111111 ctermbg=NONE ctermfg=NONE
 let g:NERDTreeWinPos='right'
+let g:NERDTreeDirArrowExpandable=''
+let g:NERDTreeDirArrowCollapsible=''
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>g :NERDTreeFind<CR>
+nnoremap <Leader>c :TagbarToggle<CR>
+set fillchars+=vert:\│
+
+" Layout
+set listchars=""
+" set listchars+=eol:↵
+set listchars+=nbsp:␣
+set listchars+=tab:→\ 
+set listchars+=trail:·
+set list
+set number
+set showcmd
+
+" Search
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>f :Rg<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>p :Files<CR>
+nnoremap <Leader>l :nohlsearch<CR>
+
+" Status
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#buffers_label=''
+let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airline_theme='base16_black_metal_bathory'
 
 " Linting
 let g:airline#extensions#ale#enabled=1
@@ -59,14 +107,3 @@ let g:ale_linters={ 'go' : ['gopls'] }
 let g:ale_sign_error='●'
 let g:ale_sign_warning='⚠️'
 
-" Search
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>f :Rg<CR>
-nnoremap <Leader>h :History<CR>
-nnoremap <Leader>p :Files<CR>
-
-" Status
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffers_label=''
-let g:airline#extensions#tabline#formatter='unique_tail'
-let g:airline_theme='minimalist'
