@@ -28,6 +28,9 @@ Plug 'junegunn/fzf.vim'
 " vim-airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Writing mode
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 call plug#end()
 
@@ -53,8 +56,12 @@ set termguicolors
 nnoremap <Leader>/ :Commentary<CR>
 
 " Editing
+set autoread
 set backspace=eol,indent,start
+set confirm
 set noexpandtab
+set scrolloff=5
+set sidescrolloff=5
 set shiftwidth=4
 set tabstop=4
 nmap <A-Down> ddp
@@ -67,11 +74,12 @@ let g:NERDTreeWinPos='right'
 let g:NERDTreeDirArrowExpandable=''
 let g:NERDTreeDirArrowCollapsible=''
 nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>g :NERDTreeFind<CR>
+nnoremap <Leader>o :NERDTreeFind<CR>
 nnoremap <Leader>c :TagbarToggle<CR>
 
 " Layout
-set colorcolumn=80
+set colorcolumn=+1
+set cursorline
 set listchars=""
 " set listchars+=eol:↵
 highlight VertSplit guibg=NONE guifg=#111111
@@ -82,6 +90,9 @@ set listchars+=trail:·
 set list
 set number
 set showcmd
+set splitbelow
+set splitright
+set textwidth=80
 
 " Search
 set hlsearch
@@ -90,15 +101,29 @@ set incsearch
 set smartcase
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Rg<CR>
+nnoremap <Leader>g :Rg<Space>
 nnoremap <Leader>h :History<CR>
-nnoremap <Leader>p :Files<CR>
+nnoremap <Leader>k :Rg<Space><C-R><C-W><CR>
 nnoremap <Leader>l :nohlsearch<CR>
+nnoremap <Leader>p :Files<CR>
+
+" Spelling
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
+nnoremap <Leader>s :setlocal spell!<CR>
+" Autocomplete with dictionary words when spell-check is enabled
+set complete+=kspell
 
 " Status
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#buffers_label=''
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_theme='base16_black_metal_bathory'
+
+" Writing
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+nnoremap <Leader>z :Goyo<CR>
 
 " Linting
 let g:airline#extensions#ale#enabled=1
