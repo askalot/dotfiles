@@ -56,6 +56,10 @@ set termguicolors
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
 
+" Config
+nnoremap <Leader>fc :edit $MYVIMRC<CR>
+nnoremap <Leader>sc :source $MYVIMRC<CR>
+
 " Editing
 set autoread
 set backspace=eol,indent,start
@@ -109,8 +113,10 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Rg<CR>
 nnoremap <Leader>g :Rg<Space>
 nnoremap <Leader>h :History<CR>
+" nnoremap <Leader>j :Jumps<CR>
 nnoremap <Leader>k :Rg<Space><C-R><C-W><CR>
 nnoremap <Leader>l :nohlsearch<CR>
+" nnoremap <Leader>m :Marks<CR>
 nnoremap <Leader>p :Files<CR>
 
 " Spelling
