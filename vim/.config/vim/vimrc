@@ -78,14 +78,17 @@ nnoremap <Leader>o :NERDTreeFind<CR>
 nnoremap <Leader>c :TagbarToggle<CR>
 
 " Layout
+highlight VertSplit guibg=NONE guifg=#111111
 set colorcolumn=+1
 set cursorline
+set fillchars+=vert:\│
 set listchars=""
 " set listchars+=eol:↵
-highlight VertSplit guibg=NONE guifg=#111111
-set fillchars+=vert:\│
+" set listchars+=eol:¬
 set listchars+=nbsp:␣
+" set listchars+=nbsp:+
 set listchars+=tab:→\ 
+" set listchars+=tab:▸\ 
 set listchars+=trail:·
 set list
 set number
