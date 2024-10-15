@@ -73,6 +73,15 @@ nmap <A-Down> ddp
 nmap <A-Up> ddkP
 vmap <A-Down> xkP`[V`]
 vmap <A-Up> xp`[V`]
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x :x<CR>
+nnoremap <Leader>y "+y
+vnoremap <Leader>y "+y
+nnoremap <Leader>P "+P
+nnoremap <Leader>p "+p
+nnoremap X "_d
+nnoremap XX "_dd
 
 " File explorer
 let g:NERDTreeWinPos='right'
@@ -100,6 +109,7 @@ set listchars+=trail:·
 set list
 set number
 set showcmd
+set signcolumn=yes
 set splitbelow
 set splitright
 set textwidth=80
@@ -117,7 +127,7 @@ nnoremap <Leader>h :History<CR>
 nnoremap <Leader>k :Rg<Space><C-R><C-W><CR>
 nnoremap <Leader>l :nohlsearch<CR>
 " nnoremap <Leader>m :Marks<CR>
-nnoremap <Leader>p :Files<CR>
+nnoremap <Leader><Space> :Files<CR>
 
 " Spelling
 autocmd FileType markdown setlocal spell
