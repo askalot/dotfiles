@@ -55,6 +55,7 @@ set termguicolors
 
 " Comments
 nnoremap <Leader>/ :Commentary<CR>
+vnoremap <Leader>/ :Commentary<CR>
 
 " Config
 nnoremap <Leader>fc :edit $MYVIMRC<CR>
@@ -71,25 +72,28 @@ set shiftwidth=4
 set tabstop=4
 nmap <A-Down> ddp
 nmap <A-Up> ddkP
-vmap <A-Down> xkP`[V`]
-vmap <A-Up> xp`[V`]
+vmap <A-Down> xp`[V`]
+vmap <A-Up> xkP`[V`]
+nnoremap <Leader>d "_d
+vnoremap <Leader>d "_d
+nnoremap <Leader>dd "_dd
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wr :w<CR>
 nnoremap <Leader>x :x<CR>
 nnoremap <Leader>y "+y
 vnoremap <Leader>y "+y
-nnoremap <Leader>P "+P
-nnoremap <Leader>p "+p
-nnoremap X "_d
-nnoremap XX "_dd
 
 " File explorer
-let g:NERDTreeWinPos='right'
 let g:NERDTreeDirArrowExpandable=''
 let g:NERDTreeDirArrowCollapsible=''
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>o :NERDTreeFind<CR>
 nnoremap <Leader>c :TagbarToggle<CR>
+
+" Help
+nnoremap <Leader>? :vert h<Space>
 
 " Layout
 highlight VertSplit guibg=NONE guifg=#111111
