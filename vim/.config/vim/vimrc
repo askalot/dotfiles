@@ -36,15 +36,19 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " Backup files
-set backupdir=.backup/,~/.backup/,/tmp//
-set directory=.swp/,~/.swp/,/tmp//
-set undodir=.undo/,~/.undo/,/tmp//
+set backup
+set backupdir=.backupdir,$MYVIMDIR/backupdir,/tmp//
+set directory=.swp/,$MYVIMDIR/.swp/,/tmp//
+set undodir=.undodir,$MYVIMDIR/undodir,/tmp//
+set undofile
 
 " Buffers
+nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :bdelete<CR>
 nnoremap <Leader>] :bnext<CR>
 nnoremap <Leader>[ :bprevious<CR>
 nnoremap <Leader>t :enew<CR>
+set hidden
 
 " Colors
 colorscheme base16-black-metal-bathory
@@ -117,13 +121,13 @@ set signcolumn=yes
 set splitbelow
 set splitright
 set textwidth=80
+set wildmenu
 
 " Search
 set hlsearch
 set ignorecase
 set incsearch
 set smartcase
-nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :Rg<CR>
 nnoremap <Leader>g :Rg<Space>
 nnoremap <Leader>h :History<CR>
