@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
 Plug 'kshenoy/vim-signature'
+Plug 'wincent/ferret'
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -45,16 +46,16 @@ set undofile
 " Buffers
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :bdelete<CR>
-nnoremap <Leader>] :bnext<CR>
-nnoremap <Leader>[ :bprevious<CR>
+nnoremap ]b :bnext<CR>
+nnoremap [b :bprevious<CR>
 nnoremap <Leader>t :enew<CR>
 set hidden
 
 " Colors
-colorscheme base16-black-metal-bathory
-" colorscheme one
-set background=dark
-"set background=light
+" colorscheme base16-black-metal-bathory
+colorscheme one
+" set background=dark
+set background=light
 set termguicolors
 
 " Comments
@@ -124,18 +125,35 @@ set textwidth=80
 set wildmenu
 
 " Search
+if executable('rg')
+	set grepprg=rg\ --vimgrep
+endif
+
 set hlsearch
 set ignorecase
 set incsearch
 set smartcase
 nnoremap <Leader>f :Rg<CR>
-nnoremap <Leader>g :Rg<Space>
+" nnoremap <Leader>g :Rg<Space>
+nnoremap <Leader>g :Ack<Space>
 nnoremap <Leader>h :History<CR>
 " nnoremap <Leader>j :Jumps<CR>
-nnoremap <Leader>k :Rg<Space><C-R><C-W><CR>
+" nnoremap <Leader>k :Rg<Space><C-R><C-W><CR>
+nnoremap <Leader>k :Ack<Space><C-R><C-W><CR>
+" nnoremap <Leader>k :grep!<Space><C-R><C-W> *<CR>:cwindow<CR>
 nnoremap <Leader>l :nohlsearch<CR>
 " nnoremap <Leader>m :Marks<CR>
 nnoremap <Leader><Space> :Files<CR>
+" Navigate argument list
+nnoremap [A :first<CR>
+nnoremap ]A :last<CR>
+nnoremap ]a :next<CR>
+nnoremap [a :prev<CR>
+" Navigate quickfix list
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprevious<CR>
 
 " Spelling
 autocmd FileType markdown setlocal spell
