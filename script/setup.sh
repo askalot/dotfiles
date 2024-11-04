@@ -13,8 +13,8 @@
 . "./helpers/vscodium.sh"
 . "./helpers/zoxide.sh"
 . "./helpers/go.sh"
-. "./helpers/diff_so_fancy.sh"
 . "./helpers/eza.sh"
+. "./helpers/delta.sh"
 
 setup_homebrew
 setup_ssh_keys
@@ -28,5 +28,5 @@ setup_zsh
 setup_nodejs
 setup_vscodium
 setup_go
-setup_diff_so_fancy
 setup_eza
+setup_delta
