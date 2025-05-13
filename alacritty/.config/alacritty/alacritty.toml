@@ -1,22 +1,16 @@
 [env]
 TERM = "xterm-256color"
 
-[colors.primary]
-background = "#282c34"
+[colors]
+primary = { background = "#282c34" }
 
 [font]
-size = 16.0
+size = 16
+normal = { family = "JetBrainsMono Nerd Font" }
 
-[font.normal]
-family = "JetBrainsMono Nerd Font"
-
-[window.dimensions]
-columns = 140
-lines = 80
-
-[window.padding]
-x = 8
-y = 8
+[window]
+padding = { x = 8, y = 8 }
+startup_mode = "Maximized"
 
 [keyboard]
 bindings = [
