@@ -1,0 +1,17 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}" --line-numbers --paging=never --syntax-theme="OneHalfDark"
+
+gui:
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 4
+  nerdFontsVersion: 3
+  showFileTree: false
+  showIcons: true
+  theme:
+    activeBorderColor:
+      - bold
+      - '#ffffff'
+    inactiveBorderColor:
+      - '#777777'
