@@ -28,3 +28,4 @@ bindings = [
 	{ chars = "\u0001)", key = "Tab", mods = "Control" },
 	{ chars = "\u0001(", key = "Tab", mods = "Control|Shift" },
 ]
+
