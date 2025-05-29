@@ -8,7 +8,6 @@
 . "./helpers/mise.sh"
 . "./helpers/fzf.sh"
 . "./helpers/nodejs.sh"
-. "./helpers/vim.sh"
 . "./helpers/tmux.sh"
 . "./helpers/vscodium.sh"
 . "./helpers/zoxide.sh"
@@ -20,7 +19,6 @@ setup_homebrew
 setup_ssh_keys
 setup_mise
 setup_fzf
-setup_vim
 setup_alacritty
 setup_tmux
 setup_zoxide
