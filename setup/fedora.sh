@@ -133,6 +133,10 @@ sudo dnf update
 # mise use -g node@latest
 # npm install -g typescript typescript-language-server
 # npm install -g vscode-langservers-extracted
+#### Bash LSP
+# npm install -g bash-language-server
+# sudo dnf install shellcheck -y
+# sudo dnf install shfmt -y
 
 ## Custom
 # echo '[charm]
