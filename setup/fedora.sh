@@ -76,6 +76,11 @@ sudo dnf update
 # sudo dnf install alacritty -y
 # mkdir -p "$HOME/.config/alacritty"
 
+### Beekeeper Studio
+# sudo curl -o /etc/yum.repos.d/beekeeper-studio.repo https://rpm.beekeeperstudio.io/beekeeper-studio.repo
+# sudo rpm --import https://rpm.beekeeperstudio.io/beekeeper.key
+# sudo dnf install beekeeper-studio -y
+
 ### Gimp
 # sudo dnf install gimp -y
 
