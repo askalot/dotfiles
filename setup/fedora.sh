@@ -133,6 +133,7 @@ sudo dnf update
 # mise use -g node@latest
 # npm install -g typescript typescript-language-server
 # npm install -g vscode-langservers-extracted
+# npm install -g fish-lsp
 #### Bash LSP
 # npm install -g bash-language-server
 # sudo dnf install shellcheck -y
