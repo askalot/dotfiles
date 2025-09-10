@@ -108,6 +108,7 @@ sudo dnf update
 # flatpak install flathub re.sonny.Workbench -y
 # flatpak install flathub app.zen_browser.zen -y
 # flatpak install flathub org.gnome.World.Secrets -y
+# flatpak install flathub org.localsend.localsend_app -y
 
 ### Unsure
 # flatpak install flathub com.brave.Browser -y
