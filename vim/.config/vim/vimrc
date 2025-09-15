@@ -51,7 +51,8 @@ set undofile
 
 " Buffers
 nnoremap <Leader>` :b#<CR>
-nnoremap <Leader>b :Buffers<CR>
+" nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
 nnoremap <Leader>bd :bdelete<CR>
 nnoremap ]b :bnext<CR>
 nnoremap [b :bprevious<CR>
@@ -141,14 +142,18 @@ set ignorecase
 set incsearch
 set smartcase
 nnoremap <Leader>f :Rg<CR>
-nnoremap <Leader>g :Rg<Space>
+" nnoremap <Leader>g :Rg<Space>
+nnoremap <Leader>g :grep<Space>
+" nnoremap <Leader>/ :grep<Space>
 nnoremap <Leader>h :History<CR>
 " nnoremap <Leader>j :Jumps<CR>
-nnoremap <Leader>k :Rg<Space><C-R><C-W><CR>
+" nnoremap <Leader>k :Rg<Space><C-R><C-W><CR>
+nnoremap <Leader>k :grep<Space><C-R><C-W><CR>
 " nnoremap <Leader>k :grep!<Space><C-R><C-W> *<CR>:cwindow<CR>
 nnoremap <Leader>l :nohlsearch<CR>
 " nnoremap <Leader>m :Marks<CR>
 nnoremap <Leader><Space> :Files<CR>
+" TODO: Use vim-unimpaired instead?
 " Navigate argument list
 nnoremap [A :first<CR>
 nnoremap ]A :last<CR>
@@ -159,6 +164,11 @@ nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
+augroup quickfix
+	autocmd!
+	autocmd QuickFixCmdPost [^l]* cwindow
+	autocmd QuickFixCmdPost l* lwindow
+augroup END
 
 " Spelling
 autocmd FileType markdown setlocal spell
@@ -193,3 +203,27 @@ let g:ale_lint_on_enter=0
 let g:ale_lint_on_save=1
 let g:ale_sign_error='●'
 let g:ale_sign_warning='⚠️'
+
+" Autocomplete (imitate)
+function AutocompleteTab()
+	let col = col('.') - 1
+	if !col
+		return "\<Tab>"
+	endif
+
+	let char = getline('.')[col - 1]
+	if char =~ '\k'
+		return "\<C-P>"
+	else
+		return "\<Tab>"
+	endif
+endfunction
+inoremap <expr> <Tab> AutocompleteTab()
+inoremap <S-Tab> <C-N>
+
+" Transparency?
+" highlight NonText ctermbg=NONE guibg=NONE
+" highlight EndOfBuffer ctermbg=NONE guibg=NONE
+" highlight VertSplit guibg=NONE guifg=#111111
+" highlight BufferLineFill ctermbg=NONE guibg=NONE
+" highlight MsgArea ctermbg=235 ctermfg=White
