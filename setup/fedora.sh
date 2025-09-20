@@ -116,6 +116,7 @@ sudo dnf update
 # flatpak install flathub org.freedesktop.Sdk.Extension.vala/x86_64/24.08 -y
 # flatpak install flathub org.gnome.Sdk.Docs/x86_64/48 -y
 # flatpak install flathub org.videolan.VLC -y
+# flatpak install flathub org.kde.kdenlive -y
 
 ## mise-en-place
 
