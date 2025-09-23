@@ -117,6 +117,7 @@ sudo dnf update
 # flatpak install flathub org.gnome.Sdk.Docs/x86_64/48 -y
 # flatpak install flathub org.videolan.VLC -y
 # flatpak install flathub org.kde.kdenlive -y
+# flatpak install flathub org.gnome.Shotwell -y
 
 ## mise-en-place
 
