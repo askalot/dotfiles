@@ -92,6 +92,8 @@ sudo dnf update
 # LATEST_YAAK=$(get_latest_github_release_url "mountain-loop/yaak" ".rpm")
 # sudo dnf install $LATEST_YAAK -y
 
+# sudo dnf install rdfind -y
+
 ## Flatpak
 
 ### Podman
