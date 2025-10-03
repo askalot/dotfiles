@@ -72,14 +72,17 @@ sudo dnf update
 
 ## GUI
 
-### Alacritty
-# sudo dnf install alacritty -y
-# mkdir -p "$HOME/.config/alacritty"
-
 ### Beekeeper Studio
 # sudo curl -o /etc/yum.repos.d/beekeeper-studio.repo https://rpm.beekeeperstudio.io/beekeeper-studio.repo
 # sudo rpm --import https://rpm.beekeeperstudio.io/beekeeper.key
 # sudo dnf install beekeeper-studio -y
+
+### Ghostty
+# sudo dnf copr enable scottames/ghostty -y
+# sudo dnf install ghostty -y
+# TODO: Remove below if Ghostty generates the config
+# mkdir -p "$HOME/.config/ghostty"
+# touch "$HOME/.config/ghostty/config"
 
 ### Gimp
 # sudo dnf install gimp -y
